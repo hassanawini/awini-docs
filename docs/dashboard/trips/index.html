@@ -1,0 +1,154 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>trips · Awini Documentation</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="# Trips"/><meta name="docsearch:language" content="en"/><meta property="og:title" content="trips · Awini Documentation"/><meta property="og:type" content="website"/><meta property="og:url" content="https://hassanawini.github.io/docs/"/><meta property="og:description" content="# Trips"/><meta name="twitter:card" content="summary"/><link rel="shortcut icon" href="/docs/img/favicon.ico"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css"/><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><script src="/docs/js/scrollSpy.js"></script><link rel="stylesheet" href="/docs/css/main.css"/><script src="/docs/js/codetabs.js"></script></head><body class="sideNavVisible separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/docs/"><img class="logo" src="/docs/img/white-logo.png" alt="Awini Documentation"/><h2 class="headerTitleWithLogo">Awini Documentation</h2></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class="siteNavGroupActive"><a href="/docs/docs/dashboard/introduction" target="_self">Dashboard</a></li><li class="siteNavGroupActive"><a href="/docs/docs/driverapp/introduction" target="_self">Driver App</a></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="docsNavContainer" id="docsNav"><nav class="toc"><div class="toggleNav"><section class="navWrapper wrapper"><div class="navBreadcrumb wrapper"><div class="navToggle" id="navToggler"><div class="hamburger-menu"><div class="line1"></div><div class="line2"></div><div class="line3"></div></div></div><h2><i>›</i><span>Dashboard</span></h2><div class="tocToggler" id="tocToggler"><i class="icon-toc"></i></div></div><div class="navGroups"><div class="navGroup"><h3 class="navGroupCategoryTitle">Dashboard</h3><ul class=""><li class="navListItem"><a class="navItem" href="/docs/docs/dashboard/introduction">Introduction</a></li><li class="navListItem"><a class="navItem" href="/docs/docs/dashboard/drivers">Drivers Management</a></li><li class="navListItem"><a class="navItem" href="/docs/docs/dashboard/services">Services</a></li><li class="navListItem navListItemActive"><a class="navItem" href="/docs/docs/dashboard/trips">trips</a></li><li class="navListItem"><a class="navItem" href="/docs/docs/dashboard/promos">Promos</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">Drivers APP</h3><ul class=""><li class="navListItem"><a class="navItem" href="/docs/docs/driverapp/introduction">introduction</a></li><li class="navListItem"><a class="navItem" href="/docs/docs/driverapp/side_menu">Side Menu</a></li><li class="navListItem"><a class="navItem" href="/docs/docs/driverapp/order">Order</a></li></ul></div></div></section></div><script>
+            var coll = document.getElementsByClassName('collapsible');
+            var checkActiveCategory = true;
+            for (var i = 0; i < coll.length; i++) {
+              var links = coll[i].nextElementSibling.getElementsByTagName('*');
+              if (checkActiveCategory){
+                for (var j = 0; j < links.length; j++) {
+                  if (links[j].classList.contains('navListItemActive')){
+                    coll[i].nextElementSibling.classList.toggle('hide');
+                    coll[i].childNodes[1].classList.toggle('rotate');
+                    checkActiveCategory = false;
+                    break;
+                  }
+                }
+              }
+
+              coll[i].addEventListener('click', function() {
+                var arrow = this.childNodes[1];
+                arrow.classList.toggle('rotate');
+                var content = this.nextElementSibling;
+                content.classList.toggle('hide');
+              });
+            }
+
+            document.addEventListener('DOMContentLoaded', function() {
+              createToggler('#navToggler', '#docsNav', 'docsSliderActive');
+              createToggler('#tocToggler', 'body', 'tocActive');
+
+              var headings = document.querySelector('.toc-headings');
+              headings && headings.addEventListener('click', function(event) {
+                var el = event.target;
+                while(el !== headings){
+                  if (el.tagName === 'A') {
+                    document.body.classList.remove('tocActive');
+                    break;
+                  } else{
+                    el = el.parentNode;
+                  }
+                }
+              }, false);
+
+              function createToggler(togglerSelector, targetSelector, className) {
+                var toggler = document.querySelector(togglerSelector);
+                var target = document.querySelector(targetSelector);
+
+                if (!toggler) {
+                  return;
+                }
+
+                toggler.onclick = function(event) {
+                  event.preventDefault();
+
+                  target.classList.toggle(className);
+                };
+              }
+            });
+        </script></nav></div><div class="container mainContainer docsContainer"><div class="wrapper"><div class="post"><header class="postHeader"><h1 id="__docusaurus" class="postHeaderTitle">trips</h1></header><article><div><span><h1><a class="anchor" aria-hidden="true" id="trips"></a><a href="#trips" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Trips</h1>
+<p>Trips are created by customers and carried out by drivers or service providers, each trip that the user creates is attached with one type of the available services. Most trips have two location, pickup location and drop off location. And may have extra addons that the customers request along with the service.</p>
+<p>How to manage trips, from listing the trips and filtering them, and updating it.</p>
+<h2><a class="anchor" aria-hidden="true" id="listing-trips"></a><a href="#listing-trips" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Listing Trips</h2>
+<p>From the left side menu go to Trips &gt;&gt; Trips, to list the available trips.</p>
+<p><img src="/img/dashboard/trips-list.jpg" alt="Trips list"></p>
+<h3><a class="anchor" aria-hidden="true" id="list-filtering"></a><a href="#list-filtering" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>List filtering</h3>
+<p><img src="/img/dashboard/trips-quick-filter.jpg" alt="Trips list quick filter"></p>
+<p>Here are the available filters that can be applied to the list, from the quick filter option:</p>
+<ul>
+<li><strong>Completed Trips</strong>: list all completed trips</li>
+<li><strong>In progress Trips</strong>: list the trips that have been taken by a driver, and currently the driver proceeding it</li>
+<li><strong>Scheduled Trips</strong>: list the trips are not yet taken by a driver, and its booking time have not yet reached</li>
+<li><strong>Canceled Trips</strong>: list all canceled trips</li>
+</ul>
+<h3><a class="anchor" aria-hidden="true" id="with-labor-trips"></a><a href="#with-labor-trips" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>With labor trips</h3>
+<p>Some trips service will be presented with extra <strong>W/L</strong> in their name</p>
+<p><img src="/img/dashboard/trips-list-services.jpg" alt="Trip list service"></p>
+<p>This indicate that the user requested a service and added special <strong>addons</strong> <em>Labors for load &amp; unload</em>.</p>
+<p>It presented here just for quick representation of trips with addons <em>Labors for load &amp; unload</em>. And it is not part of the service name.</p>
+<h2><a class="anchor" aria-hidden="true" id="trips-price-structure"></a><a href="#trips-price-structure" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Trips Price structure</h2>
+<p>Trip price depends on multiple factors,  which are:</p>
+<ul>
+<li>Distance and duration price</li>
+<li>Addons price</li>
+<li>Areas price</li>
+<li>Discounts from Promo or user wallet</li>
+</ul>
+<h3><a class="anchor" aria-hidden="true" id="distance-and-duration-price"></a><a href="#distance-and-duration-price" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Distance and Duration price</h3>
+<p>When the user books a trip he will be requested to provide pickup and destination locations, then the system will calculate the distance and the duration that it will take the driver to complete the trip.</p>
+<p>Then based on the distance and duration we got, the system will calculate the price depending on the <strong>service Price</strong> the user requested.</p>
+<blockquote>
+<p><strong>Note</strong>: refer <a href="/docs/docs/dashboard/services#prices">Service Price section</a> for more details on how the service price is structured.</p>
+</blockquote>
+<h3><a class="anchor" aria-hidden="true" id="addons-price"></a><a href="#addons-price" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Addons price</h3>
+<p>If the user requested additional addons with his booking, and the <strong>Addons</strong> have price. Then the customer will be charged extra for the addons.</p>
+<blockquote>
+<p><strong>Note</strong>: refer <a href="/docs/docs/dashboard/services#addons">Service Addons section</a> for more details.</p>
+</blockquote>
+<h3><a class="anchor" aria-hidden="true" id="areas-price"></a><a href="#areas-price" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Areas price</h3>
+<p>Areas are locations when the user request a trip and set the destination to that location he will receive increase or reduction (depending on the area type) on his total trip price.</p>
+<p>This additional increase or reduction will only include applied on the <em>distance and duration price</em>, and will not include prices of <strong>Addons</strong>, or discount from the promo and user wallet.</p>
+<blockquote>
+<p><strong>Note</strong>: refer <a href="/docs/docs/dashboard/services#areas">Service Areas section</a> for more details</p>
+</blockquote>
+<h3><a class="anchor" aria-hidden="true" id="discounts-from-promo-or-user-wallet"></a><a href="#discounts-from-promo-or-user-wallet" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Discounts from promo or user wallet</h3>
+<p>The user will receive a discount for his trip if he applied a <strong>Promo</strong> code, or he has amount in his wallet.</p>
+<p>Discount amount depends on the promo configuration or the user wallet amount.</p>
+<p>If the user applied promo code and he has amount in his wallet, then the promo code discount will take precedence over user wallet.</p>
+<h2><a class="anchor" aria-hidden="true" id="trips-status"></a><a href="#trips-status" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Trips status</h2>
+<p>The trip may go through different state, it will be shown in different dashboard pages, here is the list</p>
+<table>
+<thead>
+<tr><th style="text-align:center">Status</th><th style="text-align:center">Description</th></tr>
+</thead>
+<tbody>
+<tr><td style="text-align:center"><span style="background-color:#f39c12; color:white;border-radius:2px;padding:2px 4px; font-size:14px">Urgent</span></td><td style="text-align:center">the user requested on demand service and its currently waiting for a driver to accept it</td></tr>
+<tr><td style="text-align:center"><span style="background-color:#f39c12; color:white;border-radius:2px;padding:2px 4px; font-size:14px">Waiting offers </span></td><td style="text-align:center">the trip is scheduled and waiting for the providers to bid their prices on the order</td></tr>
+<tr><td style="text-align:center"><span style="background-color:#d2d6de;border-radius:2px;padding:2px 4px; font-size:14px">Scheduled</span></td><td style="text-align:center">the trip is scheduled and waiting for a driver to accept it</td></tr>
+<tr><td style="text-align:center"><span style="background-color:#00c0ef;color:#fff;border-radius:2px;padding:2px 4px; font-size:14px">In progress</span></td><td style="text-align:center">the trip have been accepted, and currently the driver in his way to the pickup location</td></tr>
+<tr><td style="text-align:center"><span style="background-color:#00c0ef;color:#fff;border-radius:2px;padding:2px 4px; font-size:14px">Reached</span></td><td style="text-align:center">the driver have reached to the pickup location</td></tr>
+<tr><td style="text-align:center"><span style="background-color:#00c0ef;color:#fff;border-radius:2px;padding:2px 4px; font-size:14px">On Route</span></td><td style="text-align:center">the driver started to go to the drop off location</td></tr>
+<tr><td style="text-align:center"><span style="background-color:#00a65a;color:#fff;border-radius:2px;padding:2px 4px; font-size:14px">Completed</span></td><td style="text-align:center">the driver have completed the trip</td></tr>
+<tr><td style="text-align:center"><span style="background-color:#dd4b39;color:#fff;border-radius:2px;padding:2px 4px; font-size:14px">Cancled</span></td><td style="text-align:center">the trip have been canceled, it may be canceled by either the driver, the user, or the system</td></tr>
+</tbody>
+</table>
+<h2><a class="anchor" aria-hidden="true" id="trip-attributes"></a><a href="#trip-attributes" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Trip Attributes</h2>
+<table>
+<thead>
+<tr><th style="text-align:center">Attribute</th><th style="text-align:center">Description</th></tr>
+</thead>
+<tbody>
+<tr><td style="text-align:center">Service</td><td style="text-align:center">the service the user requested</td></tr>
+<tr><td style="text-align:center">User</td><td style="text-align:center">the user who requested this trip</td></tr>
+<tr><td style="text-align:center">Driver</td><td style="text-align:center">The driver caring out this trip</td></tr>
+<tr><td style="text-align:center">Promo</td><td style="text-align:center">The promo that been applied for this trip</td></tr>
+<tr><td style="text-align:center">status</td><td style="text-align:center">Please refer Trip <a href="#trips-status">status section</a></td></tr>
+<tr><td style="text-align:center">Pickup Address</td><td style="text-align:center">Address of the pickup location</td></tr>
+<tr><td style="text-align:center">Destination Address</td><td style="text-align:center">Address of the drop off location</td></tr>
+<tr><td style="text-align:center">Created At</td><td style="text-align:center">The date the user requested the server</td></tr>
+<tr><td style="text-align:center">Booking date</td><td style="text-align:center">The date the user want this trip at</td></tr>
+<tr><td style="text-align:center">Distance</td><td style="text-align:center">Total distance of the trip from the pickup location to destination location</td></tr>
+<tr><td style="text-align:center">Duration</td><td style="text-align:center">Total duration it will take the driver from the pickup location to reach to the destination location. After the driver completes that trip it will be updated to reflect the total time the took to complete this trip</td></tr>
+<tr><td style="text-align:center">Price</td><td style="text-align:center">Total price of the trip, including the distance and duration price, addons price, and areas price</td></tr>
+<tr><td style="text-align:center">Offers</td><td style="text-align:center">The offers that the service providers have gave the customer</td></tr>
+<tr><td style="text-align:center">Cancel Reason</td><td style="text-align:center">The reason of the trip cancelation. The trip may be canceled by the user, driver, or the system</td></tr>
+<tr><td style="text-align:center">Commission</td><td style="text-align:center">total commission of the trip, including addons price</td></tr>
+<tr><td style="text-align:center">Areas</td><td style="text-align:center">The applied <strong>Areas</strong> for this trip. It will increase or reduces the total trip price, refer <a href="/docs/docs/dashboard/services#areas">Service Areas section</a> for more details</td></tr>
+<tr><td style="text-align:center">Addons</td><td style="text-align:center">The applied <strong>Addons</strong> for this trip. refer <a href="/docs/docs/dashboard/services#addons">Service Addons section</a> for more details</td></tr>
+<tr><td style="text-align:center">Times</td><td style="text-align:center">Track of the trip status changes time</td></tr>
+<tr><td style="text-align:center">Description</td><td style="text-align:center">The description the user provided during the booking</td></tr>
+<tr><td style="text-align:center">Weight</td><td style="text-align:center">The weight the user provided during the booking</td></tr>
+<tr><td style="text-align:center">Images</td><td style="text-align:center">The images the user provided during the booking</td></tr>
+<tr><td style="text-align:center">Fare Type</td><td style="text-align:center">Can have two values, <strong>Estimate Tracking</strong>: meaning the final trip price will be determined based on the actual distance the driver traveled from the pickup location to the destination location, <strong>Fixed</strong>: the final trip price will not be changed, and its based on the prediction of the distance and duration the trip will take</td></tr>
+<tr><td style="text-align:center">Booking Type</td><td style="text-align:center">Can have tow values, <strong>Urgent</strong>: the user requested <em>On Demand</em> service, <strong>Scheduled</strong>: the user requested the service on later time</td></tr>
+</tbody>
+</table>
+</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/docs/dashboard/services"><span class="arrow-prev">← </span><span>Services</span></a><a class="docs-next button" href="/docs/docs/dashboard/promos"><span>Promos</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#listing-trips">Listing Trips</a><ul class="toc-headings"><li><a href="#list-filtering">List filtering</a></li><li><a href="#with-labor-trips">With labor trips</a></li></ul></li><li><a href="#trips-price-structure">Trips Price structure</a><ul class="toc-headings"><li><a href="#distance-and-duration-price">Distance and Duration price</a></li><li><a href="#addons-price">Addons price</a></li><li><a href="#areas-price">Areas price</a></li><li><a href="#discounts-from-promo-or-user-wallet">Discounts from promo or user wallet</a></li></ul></li><li><a href="#trips-status">Trips status</a></li><li><a href="#trip-attributes">Trip Attributes</a></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="copyright">Copyright © 2020 awiniAPP</section></footer></div></body></html>

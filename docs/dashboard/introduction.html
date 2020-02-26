@@ -1,0 +1,109 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>Introduction · Awini Documentation</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="# Dashboard Introduction"/><meta name="docsearch:language" content="en"/><meta property="og:title" content="Introduction · Awini Documentation"/><meta property="og:type" content="website"/><meta property="og:url" content="https://hassanawini.github.io/docs/"/><meta property="og:description" content="# Dashboard Introduction"/><meta name="twitter:card" content="summary"/><link rel="shortcut icon" href="/docs/img/favicon.ico"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css"/><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><script src="/docs/js/scrollSpy.js"></script><link rel="stylesheet" href="/docs/css/main.css"/><script src="/docs/js/codetabs.js"></script></head><body class="sideNavVisible separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/docs/"><img class="logo" src="/docs/img/white-logo.png" alt="Awini Documentation"/><h2 class="headerTitleWithLogo">Awini Documentation</h2></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class="siteNavGroupActive siteNavItemActive"><a href="/docs/docs/dashboard/introduction" target="_self">Dashboard</a></li><li class="siteNavGroupActive"><a href="/docs/docs/driverapp/introduction" target="_self">Driver App</a></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="docsNavContainer" id="docsNav"><nav class="toc"><div class="toggleNav"><section class="navWrapper wrapper"><div class="navBreadcrumb wrapper"><div class="navToggle" id="navToggler"><div class="hamburger-menu"><div class="line1"></div><div class="line2"></div><div class="line3"></div></div></div><h2><i>›</i><span>Dashboard</span></h2><div class="tocToggler" id="tocToggler"><i class="icon-toc"></i></div></div><div class="navGroups"><div class="navGroup"><h3 class="navGroupCategoryTitle">Dashboard</h3><ul class=""><li class="navListItem navListItemActive"><a class="navItem" href="/docs/docs/dashboard/introduction">Introduction</a></li><li class="navListItem"><a class="navItem" href="/docs/docs/dashboard/drivers">Drivers Management</a></li><li class="navListItem"><a class="navItem" href="/docs/docs/dashboard/services">Services</a></li><li class="navListItem"><a class="navItem" href="/docs/docs/dashboard/trips">trips</a></li><li class="navListItem"><a class="navItem" href="/docs/docs/dashboard/promos">Promos</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">Drivers APP</h3><ul class=""><li class="navListItem"><a class="navItem" href="/docs/docs/driverapp/introduction">introduction</a></li><li class="navListItem"><a class="navItem" href="/docs/docs/driverapp/side_menu">Side Menu</a></li><li class="navListItem"><a class="navItem" href="/docs/docs/driverapp/order">Order</a></li></ul></div></div></section></div><script>
+            var coll = document.getElementsByClassName('collapsible');
+            var checkActiveCategory = true;
+            for (var i = 0; i < coll.length; i++) {
+              var links = coll[i].nextElementSibling.getElementsByTagName('*');
+              if (checkActiveCategory){
+                for (var j = 0; j < links.length; j++) {
+                  if (links[j].classList.contains('navListItemActive')){
+                    coll[i].nextElementSibling.classList.toggle('hide');
+                    coll[i].childNodes[1].classList.toggle('rotate');
+                    checkActiveCategory = false;
+                    break;
+                  }
+                }
+              }
+
+              coll[i].addEventListener('click', function() {
+                var arrow = this.childNodes[1];
+                arrow.classList.toggle('rotate');
+                var content = this.nextElementSibling;
+                content.classList.toggle('hide');
+              });
+            }
+
+            document.addEventListener('DOMContentLoaded', function() {
+              createToggler('#navToggler', '#docsNav', 'docsSliderActive');
+              createToggler('#tocToggler', 'body', 'tocActive');
+
+              var headings = document.querySelector('.toc-headings');
+              headings && headings.addEventListener('click', function(event) {
+                var el = event.target;
+                while(el !== headings){
+                  if (el.tagName === 'A') {
+                    document.body.classList.remove('tocActive');
+                    break;
+                  } else{
+                    el = el.parentNode;
+                  }
+                }
+              }, false);
+
+              function createToggler(togglerSelector, targetSelector, className) {
+                var toggler = document.querySelector(togglerSelector);
+                var target = document.querySelector(targetSelector);
+
+                if (!toggler) {
+                  return;
+                }
+
+                toggler.onclick = function(event) {
+                  event.preventDefault();
+
+                  target.classList.toggle(className);
+                };
+              }
+            });
+        </script></nav></div><div class="container mainContainer docsContainer"><div class="wrapper"><div class="post"><header class="postHeader"><h1 id="__docusaurus" class="postHeaderTitle">Introduction</h1></header><article><div><span><h1><a class="anchor" aria-hidden="true" id="dashboard-introduction"></a><a href="#dashboard-introduction" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Dashboard Introduction</h1>
+<p>Dashboard is accessed only by authorized admins, whos been granted access and credentials before hand</p>
+<blockquote>
+<p><strong>Note</strong>: please check with your admin if you did not received credentials yet</p>
+</blockquote>
+<h2><a class="anchor" aria-hidden="true" id="general-layout"></a><a href="#general-layout" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>General Layout</h2>
+<p>After you received you credentials from your administered, and have successfully logged in. You will be greeted with the following page.</p>
+<p><img src="/img/dashboard/general.jpg" style="zoom:50%;"/></p>
+<ol>
+<li>Left hand: we have side menu to navigate through different part of the dashboard</li>
+<li>Top right: you can access your account setting, and from their update your account password, name etc... .</li>
+</ol>
+<h2><a class="anchor" aria-hidden="true" id="listing-page"></a><a href="#listing-page" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Listing Page</h2>
+<p>One of the most used pages are listing pages. First page to start from for all operation. We will explore it features here.</p>
+<p><img src="/img/dashboard/listing-gereral.jpg" style="zoom:50%;"/></p>
+<p>We will explore the three features here</p>
+<ol>
+<li><p>List actions</p></li>
+<li><p>List filters</p></li>
+<li><p>Quick entity actions</p></li>
+</ol>
+<h3><a class="anchor" aria-hidden="true" id="list-actions"></a><a href="#list-actions" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>List actions</h3>
+<p><img src="/img/dashboard/list-actions.jpg" alt="list actions"></p>
+<p>On the most left side, we have <span style="background-color:#00a65a; color:white; padding: 5px 10px;border-radius:3px">+ New</span> button to create a new entity, it will take you directly to the create page</p>
+<p>And in the middle, we have <span style="background-color:#55acee; color:white; padding: 5px 10px;border-radius:3px">Export</span> button to export the listing into Excel file. Which has 3 options to export data</p>
+<ul>
+<li><strong>All</strong>: to export all available data, if you applied filters, then it will export only filtered records and will exclude the rest.</li>
+<li><strong>Current page</strong>: will export only the current page, you can increase the number of records available in a single page from the bottom of the list table.</li>
+<li><strong>Selected rows</strong>: will export only the selected rows, note here that if you select items and then change the page to select more, it will export only the newly selected records and will ignore the records selected on other pages.</li>
+</ul>
+<p>And on the right most side, we have <span style="background-color:#3f729b; color:white; padding: 5px 10px;border-radius:3px">#</span>  to show/Hide columns in the current list. This actions is temporary only.</p>
+<h3><a class="anchor" aria-hidden="true" id="list-filters"></a><a href="#list-filters" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>List filters</h3>
+<p><img src="/img/dashboard/listing-filter.jpg" alt="list filters"></p>
+<p>There are two type of filters</p>
+<ul>
+<li><strong>Normal filter</strong>, which is enabled by clicking on the <span style="background-color:#3f729b; color:white; padding: 5px 10px;border-radius:3px">Filter</span> button.</li>
+<li><strong>Quick filter</strong>, it provide you with quick filter option, which is enabled by clicking on down arrow  left side of Filter button.</li>
+</ul>
+<p>All provided filters will be included when you export files.</p>
+<p>When you open the filter section, it will provide you with different filter options (filters are different from entity to entity). After you apply a filter you must click on search button for it to take affect.</p>
+<p>You can reset the filters applied by clicking on Reset button (note here that it will not remove quick filter applied). And to remove the applied quick filter click on down arrow of quick filter then click on cancel button.</p>
+<h3><a class="anchor" aria-hidden="true" id="quick-entity-actions"></a><a href="#quick-entity-actions" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Quick entity actions</h3>
+<p><img src="/img/dashboard/list-entity-action.jpg" alt="list entity action" style="zoom:200%;"/></p>
+<p>In general each you will be presented with the following action for each record</p>
+<ol>
+<li><strong>Eye icon</strong>: it will take you to the record detail page</li>
+<li><strong>Pen icon</strong>: it will take you to the record edit page</li>
+<li><strong>Trash can icon</strong>: it will promote you to delete this record</li>
+</ol>
+<blockquote>
+<p><strong>Note</strong>: The available to may differ based on the permission you granted</p>
+</blockquote>
+</span></div></article></div><div class="docs-prevnext"><a class="docs-next button" href="/docs/docs/dashboard/drivers"><span>Drivers Management</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#general-layout">General Layout</a></li><li><a href="#listing-page">Listing Page</a><ul class="toc-headings"><li><a href="#list-actions">List actions</a></li><li><a href="#list-filters">List filters</a></li><li><a href="#quick-entity-actions">Quick entity actions</a></li></ul></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="copyright">Copyright © 2020 awiniAPP</section></footer></div></body></html>

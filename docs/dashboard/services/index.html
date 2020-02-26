@@ -1,0 +1,183 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>Services · Awini Documentation</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="# Services Management"/><meta name="docsearch:language" content="en"/><meta property="og:title" content="Services · Awini Documentation"/><meta property="og:type" content="website"/><meta property="og:url" content="https://hassanawini.github.io/docs/"/><meta property="og:description" content="# Services Management"/><meta name="twitter:card" content="summary"/><link rel="shortcut icon" href="/docs/img/favicon.ico"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css"/><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><script src="/docs/js/scrollSpy.js"></script><link rel="stylesheet" href="/docs/css/main.css"/><script src="/docs/js/codetabs.js"></script></head><body class="sideNavVisible separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/docs/"><img class="logo" src="/docs/img/white-logo.png" alt="Awini Documentation"/><h2 class="headerTitleWithLogo">Awini Documentation</h2></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class="siteNavGroupActive"><a href="/docs/docs/dashboard/introduction" target="_self">Dashboard</a></li><li class="siteNavGroupActive"><a href="/docs/docs/driverapp/introduction" target="_self">Driver App</a></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="docsNavContainer" id="docsNav"><nav class="toc"><div class="toggleNav"><section class="navWrapper wrapper"><div class="navBreadcrumb wrapper"><div class="navToggle" id="navToggler"><div class="hamburger-menu"><div class="line1"></div><div class="line2"></div><div class="line3"></div></div></div><h2><i>›</i><span>Dashboard</span></h2><div class="tocToggler" id="tocToggler"><i class="icon-toc"></i></div></div><div class="navGroups"><div class="navGroup"><h3 class="navGroupCategoryTitle">Dashboard</h3><ul class=""><li class="navListItem"><a class="navItem" href="/docs/docs/dashboard/introduction">Introduction</a></li><li class="navListItem"><a class="navItem" href="/docs/docs/dashboard/drivers">Drivers Management</a></li><li class="navListItem navListItemActive"><a class="navItem" href="/docs/docs/dashboard/services">Services</a></li><li class="navListItem"><a class="navItem" href="/docs/docs/dashboard/trips">trips</a></li><li class="navListItem"><a class="navItem" href="/docs/docs/dashboard/promos">Promos</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">Drivers APP</h3><ul class=""><li class="navListItem"><a class="navItem" href="/docs/docs/driverapp/introduction">introduction</a></li><li class="navListItem"><a class="navItem" href="/docs/docs/driverapp/side_menu">Side Menu</a></li><li class="navListItem"><a class="navItem" href="/docs/docs/driverapp/order">Order</a></li></ul></div></div></section></div><script>
+            var coll = document.getElementsByClassName('collapsible');
+            var checkActiveCategory = true;
+            for (var i = 0; i < coll.length; i++) {
+              var links = coll[i].nextElementSibling.getElementsByTagName('*');
+              if (checkActiveCategory){
+                for (var j = 0; j < links.length; j++) {
+                  if (links[j].classList.contains('navListItemActive')){
+                    coll[i].nextElementSibling.classList.toggle('hide');
+                    coll[i].childNodes[1].classList.toggle('rotate');
+                    checkActiveCategory = false;
+                    break;
+                  }
+                }
+              }
+
+              coll[i].addEventListener('click', function() {
+                var arrow = this.childNodes[1];
+                arrow.classList.toggle('rotate');
+                var content = this.nextElementSibling;
+                content.classList.toggle('hide');
+              });
+            }
+
+            document.addEventListener('DOMContentLoaded', function() {
+              createToggler('#navToggler', '#docsNav', 'docsSliderActive');
+              createToggler('#tocToggler', 'body', 'tocActive');
+
+              var headings = document.querySelector('.toc-headings');
+              headings && headings.addEventListener('click', function(event) {
+                var el = event.target;
+                while(el !== headings){
+                  if (el.tagName === 'A') {
+                    document.body.classList.remove('tocActive');
+                    break;
+                  } else{
+                    el = el.parentNode;
+                  }
+                }
+              }, false);
+
+              function createToggler(togglerSelector, targetSelector, className) {
+                var toggler = document.querySelector(togglerSelector);
+                var target = document.querySelector(targetSelector);
+
+                if (!toggler) {
+                  return;
+                }
+
+                toggler.onclick = function(event) {
+                  event.preventDefault();
+
+                  target.classList.toggle(className);
+                };
+              }
+            });
+        </script></nav></div><div class="container mainContainer docsContainer"><div class="wrapper"><div class="post"><header class="postHeader"><h1 id="__docusaurus" class="postHeaderTitle">Services</h1></header><article><div><span><h1><a class="anchor" aria-hidden="true" id="services-management"></a><a href="#services-management" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Services Management</h1>
+<p>Services are the most fundamental part in Awini system.</p>
+<p>Services modular contains multiple parts, that all corporates together to build it. We will explore them all.</p>
+<h2><a class="anchor" aria-hidden="true" id="service-entities"></a><a href="#service-entities" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Service Entities</h2>
+<h3><a class="anchor" aria-hidden="true" id="packages"></a><a href="#packages" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Packages</h3>
+<p>Packages are entity that holds the services into different groups, it apply general configuration for the services that it holds. And its the first thing the customers are presented with in the app.</p>
+<p><img src="/img/dashboard/packages-mobile.png" /></p>
+<p>As it shown in the image, when the user clicks on any packages listed he will be taken into services list under the selected packages. The user can only see the packages that are in the city he selected.</p>
+<h3><a class="anchor" aria-hidden="true" id="services"></a><a href="#services" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Services</h3>
+<p><img src="/img/dashboard/services-mobile.png" /></p>
+<p>The services are listed on the second page of the booking. some services had child services that will be displayed as in the first service &quot;Pick up&quot;.</p>
+<h3><a class="anchor" aria-hidden="true" id="prices"></a><a href="#prices" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Prices</h3>
+<p>Prices entity defines how the pricing system is structured. Each service has multiple pricing range. For example a service may had prices for orders that are between 0 km - 50 km distances, and other price for range of 50 km - 120 km, and so on.</p>
+<h3><a class="anchor" aria-hidden="true" id="addons"></a><a href="#addons" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Addons</h3>
+<p>Addons are special extra that the user adds with his orders, for example <em>Labors for load and unload</em>, some addons may had extra charges that will be added to total order price, and may be included in the order commission as well.</p>
+<h3><a class="anchor" aria-hidden="true" id="areas"></a><a href="#areas" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Areas</h3>
+<p>Area are locations that will change how the order price is calculated. It may increase or reduce the total order price based on the area type, and may be applied into multiple locations.</p>
+<h3><a class="anchor" aria-hidden="true" id="area-types"></a><a href="#area-types" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Area Types</h3>
+<p>Area types are connected with <strong>Area</strong> entity defined above, it has two types (Increase, Reduction), it increases/reduces a percentage of the total order price. It will not be applied to <strong>Addons</strong> prices.</p>
+<h2><a class="anchor" aria-hidden="true" id="service-modules-attributes"></a><a href="#service-modules-attributes" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Service Modules Attributes</h2>
+<p>We will explore each modular attributes, starting with <strong>Service</strong>.</p>
+<h3><a class="anchor" aria-hidden="true" id="service-attributes"></a><a href="#service-attributes" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Service Attributes</h3>
+<table>
+<thead>
+<tr><th style="text-align:center">Attribute</th><th style="text-align:center">Description</th></tr>
+</thead>
+<tbody>
+<tr><td style="text-align:center">Name</td><td style="text-align:center">English name of the attribute, this name will be displayed whenever the service is requested in the dashboard</td></tr>
+<tr><td style="text-align:center">Arabic name</td><td style="text-align:center">Same as the <em>Name</em> attribute, but in Arabic language</td></tr>
+<tr><td style="text-align:center">Photo</td><td style="text-align:center">The photo that will be displayed in the mobile app</td></tr>
+<tr><td style="text-align:center">Status</td><td style="text-align:center">Whether the is available to be booked from the mobile app</td></tr>
+<tr><td style="text-align:center">Visible to users</td><td style="text-align:center">If it is active, the service will be displayed in the users mobile app</td></tr>
+<tr><td style="text-align:center">Visible to drivers</td><td style="text-align:center">If it is active, the service will be displayed in the drivers app</td></tr>
+<tr><td style="text-align:center">Commission limit</td><td style="text-align:center">The commission limit will be set to driver <em>commission limit</em>, when the driver registers and select this service. Note that this attribute has no other purpose other then the one mentioned here.</td></tr>
+<tr><td style="text-align:center">Commission rate</td><td style="text-align:center">The commission rate will be set to driver <em>commission rate</em>, when the driver registers and select this service. Note that this attribute has no other purpose other then the one mentioned here.</td></tr>
+<tr><td style="text-align:center">Minimum booking notice</td><td style="text-align:center">Minimum booking notice to stop customers making bookings that start too soon, it displayed in minutes.</td></tr>
+<tr><td style="text-align:center">Maximum advance booking</td><td style="text-align:center">Maximum advance booking to stop people making bookings that occur too far in the future, it displayed in minutes.</td></tr>
+<tr><td style="text-align:center">Minutes interval</td><td style="text-align:center">The different between the times of the that will be displayed to the user in the mobile app.</td></tr>
+<tr><td style="text-align:center">Auto cancel after</td><td style="text-align:center">If the booking time exceeds this value, and the order have not been assigned to a driver, it will be canceled.</td></tr>
+<tr><td style="text-align:center">Cities</td><td style="text-align:center">The cities this service is available in. This service will not be displayed if the user city is not listed here.</td></tr>
+</tbody>
+</table>
+<hr>
+<h3><a class="anchor" aria-hidden="true" id="packages-attribute"></a><a href="#packages-attribute" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Packages Attribute</h3>
+<table>
+<thead>
+<tr><th style="text-align:center">Attribute</th><th style="text-align:center">Description</th></tr>
+</thead>
+<tbody>
+<tr><td style="text-align:center">Name</td><td style="text-align:center">English name of the attribute, this name will be displayed whenever the package is requested in the dashboard</td></tr>
+<tr><td style="text-align:center">Arabic name</td><td style="text-align:center">Same as the <em>Name</em> attribute, but in Arabic language</td></tr>
+<tr><td style="text-align:center">English description</td><td style="text-align:center">It will be used when the image is not loaded in the mobile app</td></tr>
+<tr><td style="text-align:center">Arabic name</td><td style="text-align:center">It will be used when the image is not loaded in the mobile app</td></tr>
+<tr><td style="text-align:center">English image</td><td style="text-align:center">The image that will be displayed to users when booking</td></tr>
+<tr><td style="text-align:center">Arabic image</td><td style="text-align:center">The image that will be displayed to users when booking</td></tr>
+<tr><td style="text-align:center">Order</td><td style="text-align:center">In which order the package will be displayed to customers</td></tr>
+<tr><td style="text-align:center">Status</td><td style="text-align:center">The customer will not be able to select this package, If this option is inactive</td></tr>
+<tr><td style="text-align:center">Services</td><td style="text-align:center">The services under this package, only these services will be displayed to the customer if he selects this package</td></tr>
+<tr><td style="text-align:center">Cities</td><td style="text-align:center">The cities under this package, the package will be displayed only if the customer selects this city</td></tr>
+</tbody>
+</table>
+<hr>
+<h3><a class="anchor" aria-hidden="true" id="prices-attribute"></a><a href="#prices-attribute" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Prices Attribute</h3>
+<table>
+<thead>
+<tr><th style="text-align:center">Attribute</th><th style="text-align:center">Description</th></tr>
+</thead>
+<tbody>
+<tr><td style="text-align:center">Service</td><td style="text-align:center">The service this price entity belongs to</td></tr>
+<tr><td style="text-align:center">Range starts at</td><td style="text-align:center">In which range this price starts at, must be less than <em>Range ends at</em></td></tr>
+<tr><td style="text-align:center">Range ends at</td><td style="text-align:center">In which range this price ends at, must be greater than <em>Range starts at</em></td></tr>
+<tr><td style="text-align:center">Base price</td><td style="text-align:center">When an order distance is in this price range, it will have this <em>base price</em></td></tr>
+<tr><td style="text-align:center">Travel price/km</td><td style="text-align:center">The price of each kilometer of distance the order takes</td></tr>
+<tr><td style="text-align:center">Travel price/min</td><td style="text-align:center">The price of each minute the order takes, only the time of traveling is counted here, and not the time of load and unload</td></tr>
+</tbody>
+</table>
+<hr>
+<h3><a class="anchor" aria-hidden="true" id="addons-1"></a><a href="#addons-1" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Addons</h3>
+<table>
+<thead>
+<tr><th style="text-align:center">Attribute</th><th style="text-align:center">Description</th></tr>
+</thead>
+<tbody>
+<tr><td style="text-align:center">Name</td><td style="text-align:center">English name of the addons, this name will be displayed to customers</td></tr>
+<tr><td style="text-align:center">Arabic name</td><td style="text-align:center">Arabic name of the addons, this name will be displayed to customers</td></tr>
+<tr><td style="text-align:center">Image</td><td style="text-align:center">The image that will be displayed to customers at the time of booking</td></tr>
+<tr><td style="text-align:center">Special Type</td><td style="text-align:center">This option will give the addon special function in the system. <span style="color:red">avoid using this option</span></td></tr>
+<tr><td style="text-align:center">Type</td><td style="text-align:center">How this addon will be displayed to the customer in the time of booking.</td></tr>
+<tr><td style="text-align:center">Price/piece</td><td style="text-align:center">Price of every item for this addon.</td></tr>
+<tr><td style="text-align:center">Minimum</td><td style="text-align:center">The minimum number of this item the user can book. must be less than <em>Maximum</em></td></tr>
+<tr><td style="text-align:center">Maximum</td><td style="text-align:center">The maximum number of this item the can book. must be greater than <em>Minimum</em></td></tr>
+<tr><td style="text-align:center">Commission rate</td><td style="text-align:center">How much commission the driver will be charged of total of this addon price. If the addon commission rate is set to 0, then the driver will not be charged commission for providing this addon. <span style="color:orange">This attribute is different than the driver <em>commission rate</em>, and driver <em>commission rate</em> is not applied on addons price</span></td></tr>
+<tr><td style="text-align:center">Status</td><td style="text-align:center">Whether this addons is active for users to use or not</td></tr>
+<tr><td style="text-align:center">Double price for traveling</td><td style="text-align:center">If the order distance is over 120 km, then the number of items the user added for this addon will be doubled along with it total price.</td></tr>
+<tr><td style="text-align:center">Service</td><td style="text-align:center">The service this addon belongs to, it will only be displayed with this service</td></tr>
+<tr><td style="text-align:center">Package</td><td style="text-align:center">The addon will only be available for customers if they selected these packages, and then selected the service this addon is available for as well</td></tr>
+</tbody>
+</table>
+<hr>
+<h3><a class="anchor" aria-hidden="true" id="areas-attribute"></a><a href="#areas-attribute" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Areas Attribute</h3>
+<table>
+<thead>
+<tr><th style="text-align:center">Attribute</th><th style="text-align:center">Description</th></tr>
+</thead>
+<tbody>
+<tr><td style="text-align:center">Service</td><td style="text-align:center">The service this area belongs to, it will only be applied with this service</td></tr>
+<tr><td style="text-align:center">Area type</td><td style="text-align:center">The area type, if the order is in this area, then the pricing of <strong>Area type</strong> will be applied</td></tr>
+<tr><td style="text-align:center">Radius</td><td style="text-align:center">The distance from the center location</td></tr>
+<tr><td style="text-align:center">Latitude/Longitude</td><td style="text-align:center">The coordination of this are location, it will be set automatically from the map</td></tr>
+<tr><td style="text-align:center">Status</td><td style="text-align:center">If this area is inactive it will not be applied for orders</td></tr>
+</tbody>
+</table>
+<hr>
+<h3><a class="anchor" aria-hidden="true" id="area-types-attribute"></a><a href="#area-types-attribute" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Area Types Attribute</h3>
+<table>
+<thead>
+<tr><th style="text-align:center">Attribute</th><th style="text-align:center">Description</th></tr>
+</thead>
+<tbody>
+<tr><td style="text-align:center">Name</td><td style="text-align:center">English name of the Area type, this name will be displayed for customers</td></tr>
+<tr><td style="text-align:center">Arabic name</td><td style="text-align:center">Arabic name of the Area type, this name will be displayed for customers</td></tr>
+<tr><td style="text-align:center">Type</td><td style="text-align:center">Whether this entity increases or reduces the total order price</td></tr>
+<tr><td style="text-align:center">Percentage</td><td style="text-align:center">increase/reduction percentage that will be applied to order</td></tr>
+<tr><td style="text-align:center">Color</td><td style="text-align:center">The color of <strong>Area</strong> having this <strong>Area Type</strong> when it is displayed on the map</td></tr>
+</tbody>
+</table>
+</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/docs/dashboard/drivers"><span class="arrow-prev">← </span><span>Drivers Management</span></a><a class="docs-next button" href="/docs/docs/dashboard/trips"><span>trips</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#service-entities">Service Entities</a><ul class="toc-headings"><li><a href="#packages">Packages</a></li><li><a href="#services">Services</a></li><li><a href="#prices">Prices</a></li><li><a href="#addons">Addons</a></li><li><a href="#areas">Areas</a></li><li><a href="#area-types">Area Types</a></li></ul></li><li><a href="#service-modules-attributes">Service Modules Attributes</a><ul class="toc-headings"><li><a href="#service-attributes">Service Attributes</a></li><li><a href="#packages-attribute">Packages Attribute</a></li><li><a href="#prices-attribute">Prices Attribute</a></li><li><a href="#addons-1">Addons</a></li><li><a href="#areas-attribute">Areas Attribute</a></li><li><a href="#area-types-attribute">Area Types Attribute</a></li></ul></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="copyright">Copyright © 2020 awiniAPP</section></footer></div></body></html>
