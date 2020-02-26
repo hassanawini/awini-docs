@@ -1,10 +1,6 @@
 {
   "docs": {
-    "Docusaurus": ["doc1"],
-    "First Category": ["doc2"],
-    "Second Category": ["doc3"]
-  },
-  "docs-other": {
-    "First Category": ["doc4", "doc5"]
+    "Dashboard": ["dashboard/introduction", "dashboard/drivers", "dashboard/services", "dashboard/trips", "dashboard/promos"],
+    "Drivers APP": ["driverapp/introduction", "driverapp/side_menu", "driverapp/order"]
   }
 }
