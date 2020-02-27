@@ -14,8 +14,8 @@ const users = [];
 const siteConfig = {
   title: 'Awini Documentation', // Title for your website.
   tagline: 'Awini Documentation Hub',
-  url: 'https://hassanawini.github.io', // Your website URL
-  baseUrl: '/docs/', // Base URL for your project */
+  url: 'http://docs.awiniapp.com', // Your website URL
+  baseUrl: '/', // Base URL for your project */
   // For github.io type URLs, you would set the url and baseUrl like:
   //   url: 'https://facebook.github.io',
   //   baseUrl: '/test-site/',
@@ -30,7 +30,8 @@ const siteConfig = {
   // For no header links in the top nav bar -> headerLinks: [],
   headerLinks: [
     {doc: 'dashboard/introduction', label: 'Dashboard'},
-    {doc: 'driverapp/introduction', label: 'Driver App'},
+    {doc: 'driverapp/introduction', label: 'Drivers App'},
+    {doc: 'userapp/introduction', label: 'Users App'},
     // {page: 'help', label: 'Help'},
     // {blog: true, label: 'Blog'},
   ],
