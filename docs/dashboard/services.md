@@ -17,7 +17,7 @@ Services modular contains multiple parts, that all corporates together to build 
 
 Packages are entity that holds the services into different groups, it apply general configuration for the services that it holds. And its the first thing the customers are presented with in the app.
 
-<img src="/img/dashboard/packages-mobile.png" />
+![](assets/img/dashboard/packages-mobile.png)
 
 As it shown in the image, when the user clicks on any packages listed he will be taken into services list under the selected packages. The user can only see the packages that are in the city he selected.
 
@@ -25,7 +25,7 @@ As it shown in the image, when the user clicks on any packages listed he will be
 
 ### Services
 
-<img src="/img/dashboard/services-mobile.png" />
+![](assets/img/dashboard/services-mobile.png)
 
 The services are listed on the second page of the booking. some services had child services that will be displayed as in the first service "Pick up".
 

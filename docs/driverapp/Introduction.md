@@ -15,8 +15,8 @@ driver  are required to enter they phone number, the system will check the statu
 
 ### Step 0
 it’s basically require from the driver to verify his phone number by entering the OTP code from SMS message
-![](/img/Introduction/phone_field.jpg)
-![](/img/Introduction/otp_field.jpg)
+![](assets/img/Introduction/phone_field.jpg)
+![](assets/img/Introduction/otp_field.jpg)
 
 ### Step 1
 It’s require from driver to enter they profile information which is:
@@ -27,7 +27,7 @@ It’s require from driver to enter they profile information which is:
 * Password Confirmation
 * Referral code (optional)
 > Note: referral code is basically if driver has a friend invite them to register in the application they can enter there Referral code  
-![](/img/Introduction/step1.jpg)
+![](assets/img/Introduction/step1.jpg)
 
 ### Step 2
 In this step.
@@ -35,11 +35,11 @@ In this step.
 * Bank IBAN number (optional)
 * National ID photo
 * Driver License Photo
-![](/img/Introduction/step2.jpg)
+![](assets/img/Introduction/step2.jpg)
 
 ### Step 3
 In this step it’s require for driver to enter they registering vehicle information. First they need to select the service type, for example Pickup Regular, Pickup Large, Truck, and so on. 
-![](/img/Introduction/step3_1.jpg)
+![](assets/img/Introduction/step3_1.jpg)
 
 > Note: the services list that will appear to driver it’s coming from available services that Admin have provided in dashboard  
 
@@ -54,10 +54,10 @@ information. Which is.
 * Back Car photo
 * Vehicle Registration ID photo
 * Vehicle Insurance photo
-![](/img/Introduction/step3_2.jpg)
+![](assets/img/Introduction/step3_2.jpg)
 
 After completing all steps now a message dialog appear to congratulate driver and inform that the registration will be review by admin to approve or disapprove account
-![](/img/Introduction/step3_3.jpg)
+![](assets/img/Introduction/step3_3.jpg)
 > Note: all photo will capture directly from the mobile phone camera, in this case admin can insure that it’s not a fake photos  
 
 - - - -
@@ -68,7 +68,7 @@ To sign in driver application, it’s need to enter phone number and this phone 
 * Approved, if Admin has review and accept account
 * Disapproved, if Admin has reject account
 * Inactive,  in any case admin inactive account 
-![](/img/Introduction/signin.jpg)
+![](assets/img/Introduction/signin.jpg)
 
 > In all these status driver can’t login into account except if status is approved. Other wise a message dialog will appear to explain account status.  
 
@@ -78,5 +78,5 @@ In case driver has forgot the password, a verify OTP will send to driver phone n
 * New Password confirmation
 * OTP Code
 
-![](/img/Introduction/forgot_password_alert.jpg)
-![](/img/Introduction/forgot_password_field.jpg)
+![](assets/img/Introduction/forgot_password_alert.jpg)
+![](assets/img/Introduction/forgot_password_field.jpg)

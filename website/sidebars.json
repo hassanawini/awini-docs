@@ -1,6 +1,7 @@
 {
   "docs": {
     "Dashboard": ["dashboard/introduction", "dashboard/drivers", "dashboard/services", "dashboard/trips", "dashboard/promos"],
-    "Drivers APP": ["driverapp/introduction", "driverapp/side_menu", "driverapp/order"]
+    "Drivers App": ["driverapp/introduction", "driverapp/side_menu", "driverapp/order"],
+    "Users App": ["userapp/introduction", "userapp/account", "userapp/orders", "userapp/trips"]
   }
 }

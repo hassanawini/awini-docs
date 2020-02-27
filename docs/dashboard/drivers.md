@@ -1,111 +1,118 @@
 ---
 id: drivers
 title: Drivers Management
-sidebar_label: Drivers Management
+sidebar_label: Drivers
 ---
 
 
 # Drivers Management
 
-We will explore drivers management features in this page. We will look at drivers creating process, approval, and exporting them into excel file.
+We will explore drivers management operations in this page. We will look at how can we create new driver account, approve drivers, and export them into excel file.
 
 
 
 ## Listing the drivers
 
-Go to drivers page from the side menu
+To list the available drivers, go to side menu and select, Drivers >> Drivers
 
-Drivers >> Drivers
+![Sidemenu drivers](assets/img/drivers/sidemenu-drivers.jpg)
 
-<img src="/img/drivers/sidemenu-drivers.jpg" style="zoom:67%;" />
+You will be presented with drivers list page, from there you can perform various actions.
 
 ## Driver Commission
 
+Commission is the amount that the drivers owe to Awini platform in exchange of receiving orders and utilize its services. 
+
 The commission system works as follow.
 
-When a driver register in the application and his account has been approved by a dispatcher, the dispatcher set a *commission rate*, and *commission limit* for this drivers. And as initial his *commission balance* is 0.
+When a driver registers in the application and his account has been approved by a dispatcher, the dispatcher will be asked to set driver *commission rate*, and *commission limit* for him. At initial point the driver *commission balance* will be at 0.
 
-> **Note**: Check driver attribute bellow for more details on what commission rate, and limit means
+> **Note**: Check driver attribute bellow for more details on what commission rate, and commission limit are.
 
 
 
-Let us assume driver commission rate, and limit as follow:
+We will assume that the driver *commission rate*, and *commission limit* are set as follow:
 
 - Commission rate: 20%
 - Commission limit: 250 SAR
 
 
 
-After the driver has been approved he can receive customer orders. We will assume the total order price is 200 SAR. Now when the driver accept the order and completes it. A commission will be added to his *commission balance* 
+After the driver has been approved, the driver can start to receive orders on his mobile phone.
 
-Order total price is 200 SAR
+We will assume that the driver received an order with a total price of 200 SAR, and without any extra addons. When the driver accepts the order and complete it. A commission will be added to the driver *commission balance*, as follow:
 
-Driver commission rate is 20
+Order total price is **200 SAR**
 
-So, 20% of 200 SAR equals 40 SAR
+Driver *commission rate* is **20%**
 
-So 40 SAR is added into the driver commission balance.
+Therefore, **20%** (driver *commission rate*) of **200 SAR** (order total price) equals **40 SAR**
+
+And so, this **40 SAR** is added to the driver *commission balance*.
+
+
 
 ---
 
-When the driver *commission balance* exceeds *commission limit*, his account will be suspended and he will not be able to receive order. Until he clears his commission or part of it.
+When the driver *commission balance* exceeds *commission limit*, his account will be suspended and he will no longer be able to receive orders. Until he clears his *commission balance* or part rof it.
 
 ## Creating New Driver
 
-Got to drivers listing page, then click on **New** button from the above
+From the drivers listing page, click on **New** button from the above list actions. you will be presented with a form, fill out the required driver details. and submit it.
 
-Then fill out the driver details.
+> **Note:** All required information of the driver must be filled out, in order to save the changes. The required fields are *(first name, last name, phone, national ID, password, and approval state)*
 
-> **Note:** All required information of the driver must be filled in order to save the changes. which are *(first name, last name, phone, national ID, password, and approval state)*
-
-
-
-Please check the driver attribute details from 
-
-
+Please check the [driver attribute](#drivers-attributes) section, for more details.
 
 ## Drivers Approval 
 
-For drivers approval.
+In order for the drivers to receive orders, they must register from the mobile app, then their account must be reviewed by the dispatcher for approval.
 
-First go into driver listing page, from the side menu.
+To approve drivers account, follow the step:
 
-Then use quick filter, to filter out only the pending account. Using this methods will give list of drivers that their *approval state* is pending and also they completed all 3 registration steps.
+1. Go to driver listing page, from the left side menu.
+2. Then, use quick filter, to filter out the pending drivers account. Using this methods will give list of drivers that their *approval state* is pending and also they completed all registration steps.
 
-![Pending filter](/img/drivers/quick-filter.jpg)
+![Pending filter](assets/img/drivers/quick-filter.jpg)
 
-Now go to "Pen icon" on the right side of the driver details
+3. Then, go to "Pen icon" on the right side of the driver record that you want to approve.
 
-![Pending filter](/img/drivers/pen-icon.jpg)
+![Pending filter](assets/img/drivers/pen-icon.jpg)
 
+4. Then, review the driver account and that he satisfy the requirements. 
+5. Go to Approval tab 
 
-Then, after verifying his account details,  go to Approval tab 
+![approval tab](assets/img/drivers/approva-tab.jpg)
 
-<img src="/img/drivers/approva-tab.jpg" style="zoom:67%;" />
+6. Fill out the approval form,
 
-Fill out the form,
+![approval form](assets/img/drivers/approval-form.jpg)
 
-<img src="/img/drivers/approval-form.jpg" style="zoom:67%;" />
+> **Note**: check Driver [Attributes section](#drivers-attributes) for more details
 
+In case the driver did not meet the requirements, and you want to reject his account, you must provide *rejection reason* Then submit the form to save it.
 
+In both the *Approval*, and *Rejection* cases, the driver will receive SMS message indicate his approval state.
 
-> **Note**: Please check Driver Attributes section for more details
+Approval form can be updated later, and the driver *Approval State* can be changed as well. Each time the *Approval State* changes, the driver will receive SMS message notifying him of the new state.
 
-In case you want to reject driver registration, you must provide *rejection reason*. Then, submit the form to save it.
-
-The driver will receive SMS message indicate his approval state, for both *Approval*, and *Rejection*.
-
-This form can be updated later, and the driver *Approval State* can be changed as well. Each time the driver *Approval State* changes he will receive SMS message notifying him.
+After the approval, the driver can start to receive orders.
 
 
 
 ## Aerial View
 
-From Aerial view page the dispatcher can track drivers location real time.  By dragging over the map it will refresh automatically to show more drivers.
+In Aerial view page the dispatcher will be able to track drivers location real time.
 
-<img src="/img/drivers/aerial-view.jpg" style="zoom:67%;" />
+Only approved drivers account, and opened their mobile app after the approval, are visible in **Aerial view**. 
 
- to suspend auto searching, check-in the ***Stop auto search***. then you can search manually by clicking on **Search** button. 
+> **Note**: Sometimes the drivers location are not updated, because some driver may have disabled the GPS system from the mobile app. you can check the last time his location have been updated from *last updated at* attribute
+
+By dragging over the map it will refresh automatically to show more drivers.
+
+![Aerial view](assets/img/drivers/aerial-view.jpg)
+
+ to stop auto searching feature, check-in the ***Stop auto search***. then you can search manually by clicking on **Search** button. 
 
 You also have the ability to filter out specific drivers, using the available filters. after applying a filter you must click on search button, or continue dragging the map to refresh it.
 
@@ -115,7 +122,7 @@ By clicking on  a driver from the right panel, the map will point you in into hi
 
 ### Driver specific attributes
 
-Attributes that are related to the drivers, 
+Attributes that are related to the drivers.
 
 |    Attribute     |                         Description                          |
 | :--------------: | :----------------------------------------------------------: |
@@ -159,6 +166,4 @@ Attriubte that are specific to the driver
 | Back photo                 | Back photo of the vehicle                |
 | Vehicle registration photo | Governmental vehicle registration photo  |
 | Insurance photo            | Vehicle Insurance photo                  |
-
-### 
 

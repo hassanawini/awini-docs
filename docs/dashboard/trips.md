@@ -15,13 +15,13 @@ How to manage trips, from listing the trips and filtering them, and updating it.
 
 From the left side menu go to Trips >> Trips, to list the available trips.
 
-![Trips list](/img/dashboard/trips-list.jpg)
+![Trips list](assets/img/dashboard/trips-list.jpg)
 
 
 
 ### List filtering
 
-![Trips list quick filter](/img/dashboard/trips-quick-filter.jpg)
+![Trips list quick filter](assets/img/dashboard/trips-quick-filter.jpg)
 
 
 
@@ -38,7 +38,7 @@ Here are the available filters that can be applied to the list, from the quick f
 
 Some trips service will be presented with extra **W/L** in their name
 
-![Trip list service](/img/dashboard/trips-list-services.jpg)
+![Trip list service](assets/img/dashboard/trips-list-services.jpg)
 
 This indicate that the user requested a service and added special **addons** *Labors for load & unload*.
 
